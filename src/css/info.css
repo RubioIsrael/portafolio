@@ -1,0 +1,40 @@
+.contenedor-flex{
+    display: flex;
+}
+.foto{
+    float:left;
+    margin-top: 3%;
+    margin-left: 3%;
+    max-width: 25%;
+}
+.contenedor-descripcion{
+    margin-left: 5%;
+}
+.descripcion{
+    border: solid 1px greenyellow;
+    margin-bottom: 1%;
+}
+.flex-align-center{
+    display: flex;
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.div-tecnologias{
+    border: solid 1px greenyellow;
+    width: 50%;
+}
+.div-contacto{
+    border: solid 1px greenyellow;
+    width: 50%;
+}
+.elemento-contacto{
+    margin-left: 1%;
+}
+.leyenda{
+    font-size: 10px;
+}
+a{
+    margin-left: 1%;
+}

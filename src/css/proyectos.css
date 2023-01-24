@@ -1,0 +1,46 @@
+.flex-justify-align-center{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.div-proyecto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+.div-proyectos{
+    min-height: 80%;
+}
+.div-imagen{
+    max-width: 300px;
+    min-width: 300px;
+    margin-right: 2%;
+}
+.imagen{
+    max-width: 100%;
+    max-height: 100%;
+}
+.div-info{
+    width: 60%;
+    text-align: justify;
+}
+.activa{
+    display: block;
+}
+.inactiva{
+    display: none;
+}
+
+
+.punto {
+    cursor: pointer;
+    margin-left: 1%;
+    font-size: 15px;
+}
+.punto-activo{
+    color: yellowgreen;
+}
+.punto-inactivo{
+    color:white;
+}
