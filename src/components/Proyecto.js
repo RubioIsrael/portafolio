@@ -18,7 +18,7 @@ function Proyecto(props){
                 <p>{props.nombre}</p>
                 <p>{props.institucion}</p>
                 <p>{props.tecnologias}</p>
-                <p>{props.descripcion}</p> 
+                <p className="justify-text">{props.descripcion}</p> 
                 {verPrivacidad(props.enlace)}
             </div>
         </div>
