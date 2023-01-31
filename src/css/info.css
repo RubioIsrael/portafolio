@@ -1,40 +1,102 @@
-.contenedor-flex{
-    display: flex;
+@media (min-width:1000px) {
+    .contenedor-flex{
+        display: flex;
+    }
+    .contenedor-flex-contacto{
+        display: flex;
+    }
+    .foto{
+        float:left;
+        margin-top: 3%;
+        margin-left: 3%;
+        max-width: 25%;
+    }
+    .contenedor-descripcion{
+        margin-left: 5%;
+        width: 65%;
+    }
+    .descripcion{
+        border: solid 1px greenyellow;
+        margin-bottom: 1%;
+    }
+    .flex-align-center{
+        display: flex;
+        align-items: center;
+    }
+    .justify-center{
+        justify-content: center;
+    }
+    .div-tecnologias{
+        border: solid 1px greenyellow;
+        width: 50%;
+    }
+    .div-contacto{
+        border: solid 1px greenyellow;
+        width: 50%;
+    }
+    .text-justify{
+        text-align: justify;
+    }
+    .wrap{
+        word-wrap: break-word;
+    }
+    .elemento-contacto{
+        margin-left: 1%;
+        min-width: 1%;
+        width:100%
+    }
+    .leyenda{
+        font-size: 10px;
+    }
+    a{
+        margin-left: 1%;
+    }    
 }
-.foto{
-    float:left;
-    margin-top: 3%;
-    margin-left: 3%;
-    max-width: 25%;
+
+@media (max-width:999px){
+    .foto{
+        max-width: 70%;
+        margin-top: 3%;
+    }
+    .contenedor-descripcion{
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    .descripcion{
+        border: solid 1px greenyellow;
+        margin-bottom: 1%;
+    }
+    .div-tecnologias{
+        border: solid 1px greenyellow;
+        width: 50%;
+    }
+    .div-contacto{
+        border: solid 1px greenyellow;
+        width: 50%;
+    }
+    .wrap{
+        word-wrap: break-word;
+    }
+    .elemento-contacto{
+        margin-left: 1%;
+        min-width: 1%;
+    }
+    .leyenda{
+        font-size: 10px;
+    }
+    a{
+        margin-left: 1%;
+    } 
+    .contenedor-flex-contacto{
+        display: flex;
+    }
 }
-.contenedor-descripcion{
-    margin-left: 5%;
-}
-.descripcion{
-    border: solid 1px greenyellow;
-    margin-bottom: 1%;
-}
-.flex-align-center{
-    display: flex;
-    align-items: center;
-}
-.justify-center{
-    justify-content: center;
-}
-.div-tecnologias{
-    border: solid 1px greenyellow;
-    width: 50%;
-}
-.div-contacto{
-    border: solid 1px greenyellow;
-    width: 50%;
-}
-.elemento-contacto{
-    margin-left: 1%;
-}
-.leyenda{
-    font-size: 10px;
-}
-a{
-    margin-left: 1%;
+
+@media (max-width:400px){
+    .foto{
+        border: 1px solid salmon;
+    }
+    .icon{
+        max-width: 20%;
+    }
 }

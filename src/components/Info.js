@@ -10,55 +10,63 @@ import php from "../img/php.png";
 import laravel from "../img/laravel.png";
 import mariadb from "../img/mariadb.png"
 import reactIcon from "../img/react.png"
+import { info_texto } from '../js/info_texto';
 import '../css/info.css';
 
-function Info(){
+function Info(props){
+    const lang = props.lang;
     return(
-        <div className="contenedor-flex">
+        <div className="contenedor-flex mw">
             <img src={foto} alt="Israel" className="foto"/>
             <div className="contenedor-descripcion">
                 <p>
-                    José De Israel Rubio Moreno - Desarrollador Web
+                    José De Israel Rubio Moreno - {info_texto[lang].cargo}
                 </p>
                 <div className="descripcion">
-                    <p>Desarrollador Web con experiencia laboral de 2 años  
-                    en constante aprendizaje y apasionado de la programación.
-                    He trabajado en distintos proyectos privados basados en 
-                    tecnologías web.</p>
+                    <p>{info_texto[lang].descripcion}</p>
                 </div>
-                <div className='contenedor-flex'>
+                <div className='contenedor-flex-contacto'>
                     <div className='div-tecnologias'>
-                        <p>Tecnologías</p>
+                        <p>{info_texto[lang].tecno}</p>
                         <div className='flex-align-center justify-center'>
-                            <img src={html5} alt="html5" title="html5"/>
-                            <img src={css} alt="css3" title="css3"/>
-                            <img src={js} alt="javascript" title="javascript"/>
-                            <img src={php} alt="php" title="php"/>
+                            <img className="icon" src={html5} alt="html5" title="html5"/>
+                            <img className="icon" src={css} alt="css3" title="css3"/>
+                            <img className="icon" src={js} alt="javascript" title="javascript"/>
+                            <img className="icon" src={php} alt="php" title="php"/>
                         </div>
                         <div className='flex-align-center justify-center'>
-                            <img src={laravel} alt="laravel" title="laravel"/>
-                            <img src={mariadb} alt="mariadb" title="mariadb"/>
-                            <img src={reactIcon} alt="react" title="react"/>
+                            <img className="icon" src={laravel} alt="laravel" title="laravel"/>
+                            <img className="icon" src={mariadb} alt="mariadb" title="mariadb"/>
+                            <img className="icon" src={reactIcon} alt="react" title="react"/>
                         </div>
                     </div>
                     <div className="div-contacto">
-                        <p>Contacto</p>
-                        <div className='flex-align-center'>
+                        <p>{info_texto[lang].cont}</p>
+                        <div className='flex-align-center text-justify wrap'>
                             <CallIcon className="elemento-contacto"></CallIcon>
                             <span className="elemento-contacto">+52 2297791049</span>
                         </div>
-                        <div className='flex-align-center'>
+                        <div className='flex-align-center text-justify wrap'>
                             <EmailIcon className="elemento-contacto"></EmailIcon>
-                            <span className="elemento-contacto">rubioisrael.jm@gmail.com</span>
+                            <span className="elemento-contacto">
+                                <a href="mailto: rubioisrael.jm@gmail.com">
+                                    rubioisrael.jm@gmail.com
+                                </a>
+                            </span>
                         </div>
-                        <div className='flex-align-center'>
+                        <div className='flex-align-center text-justify wrap'>
                             <LinkedInIcon className="elemento-contacto"></LinkedInIcon>
-                            <span className="elemento-contacto">https://www.linkedin.com/in/jirm-wd/</span>
+                            <span className="elemento-contacto">
+                                <a href="https://www.linkedin.com/in/jirm-wd/" 
+                                    rel="noreferrer"
+                                    target="_blank">
+                                    https://www.linkedin.com/in/jirm-wd/
+                                </a>
+                            </span>
                         </div>
                     </div>
                 </div>
                 <span className='leyenda'>
-                    Íconos de  
                     <a href="https://icons8.com/icons/" rel ="noreferrer" target="_blank">
                         Icons8
                     </a>

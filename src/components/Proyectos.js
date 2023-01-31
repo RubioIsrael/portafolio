@@ -1,30 +1,55 @@
 import React from "react";
 import Proyecto from "./Proyecto.js";
-import { useEffect } from "react";
+import { useEffect , useState } from "react";
 import "../css/proyectos.css";
-import descripciones from "./descripciones.js";
-import { crearCarril } from "./funciones.js";
-import personal from "../img/Gris.png";
-import cimat from "../img/cimat.png";
-import itver from "../img/itver.png";
+import { info_proyectos } from "../js/info_proyectos.js";
+import { info_proyectos_en } from "../js/info_proyectos_en.js";
 
-function Proyectos(){
-    const {memorama,sgp,pcv,gdf,pcm,bot} = descripciones;
-    useEffect(crearCarril,[]);
+
+function Proyectos(props){
+    //const {memorama,sgp,pcv,gdf,pcm,bot} = descripciones;
+    const [index, setIndex] = useState(0);
+    let proyecto = "";
+
+    function crearCarril(){
+        const divPuntos = document.getElementById("div-puntos");
+        for(let i = 0; i<6;i++){
+            const punto = document.createElement("span");
+            punto.textContent = "■";
+            punto.id = i;
+            punto.className = "punto punto-inactivo";
+            punto.onclick = seleccionarProyecto.bind(this,punto);
+            divPuntos.appendChild(punto);
+        }
+    }
+    function seleccionarProyecto(punto){
+        setIndex(punto.id);
+    }
+    useEffect(
+        crearCarril,
+        ([])
+    );
+
+    if(props.lang === "MX"){
+        proyecto = info_proyectos[index];
+    }else{
+        proyecto = info_proyectos_en[index];
+    }
+
     return(
         <div>
             <div className="div-proyectos">
                 <div id="pr1" name="proyecto" className="activa">
                     <Proyecto 
-                        nombre="Memorama numérico" 
-                        imagen={personal}
-                        tecnologias="HTML, CSS y Javascript" 
-                        institucion="Proyecto personal"
-                        descripcion={memorama} 
-                        enlace="https://codepen.io/ImbiRM/pen/zYaRzdW">
+                        nombre={proyecto.nombre} 
+                        imagen={proyecto.imagen}
+                        tecnologias={proyecto.tecnologias}
+                        institucion={proyecto.institucion}
+                        descripcion={proyecto.descripcion} 
+                        enlace={proyecto.enlace}>
                     </Proyecto>
                 </div>
-                <div id="pr2" name="proyecto" className="inactiva">
+                {/* <div id="pr2" name="proyecto" className="inactiva">
                     <Proyecto 
                         nombre="Sistema Gestor de Proyectos"  
                         imagen={cimat}
@@ -67,13 +92,13 @@ function Proyectos(){
                 <div id="pr6" name="proyecto" className="inactiva">
                     <Proyecto 
                         nombre="Plataforma de certificación escolar" 
-                        tecnologias="HTML, CSS y Javascript" 
+                        tecnologias="HTML, CSS & Javascript" 
                         imagen={personal}
                         institucion="Privada"
                         descripcion={pcm} 
                         enlace="">
                     </Proyecto>
-                </div>
+                </div> */}
             </div>
             <div id="div-puntos" className="flex-justify-align-center div-puntos">
 

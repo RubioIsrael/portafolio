@@ -8,6 +8,7 @@ html,body{
   min-height: 100vh;
   font-size: calc(10px + 2vmin);
   color: white;
+  width: 100%;
 }
 .link {
   color: #61dafb;
@@ -26,9 +27,18 @@ html,body{
   margin-right: 5%;
   float:right;
 }
+.div-bandera{
+  margin-right: 5%;
+  float:right;
+}
 .nav{
   display: flex;
   justify-content: center;
   align-items: center;
   border: solid 1px white;
+}
+.boton-bandera{
+  background: none;
+  border: none;
+  cursor: pointer;
 }
