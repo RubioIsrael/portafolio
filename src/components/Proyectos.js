@@ -2,8 +2,8 @@ import React from "react";
 import Proyecto from "./Proyecto.js";
 import { useEffect , useState } from "react";
 import "../css/proyectos.css";
-import { info_proyectos } from "../js/info_proyectos.js";
-import { info_proyectos_en } from "../js/info_proyectos_en.js";
+import { info_proyectos } from "../js/textos_modulo_proyectos/info_proyectos.js";
+import { info_proyectos_en } from "../js/textos_modulo_proyectos/info_proyectos_en.js";
 
 
 function Proyectos(props){

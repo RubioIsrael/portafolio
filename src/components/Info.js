@@ -10,7 +10,7 @@ import php from "../img/php.png";
 import laravel from "../img/laravel.png";
 import mariadb from "../img/mariadb.png"
 import reactIcon from "../img/react.png"
-import { info_texto } from '../js/info_texto';
+import { info_texto } from '../js/textos_modulo_info/info_texto';
 import '../css/info.css';
 
 function Info(props){

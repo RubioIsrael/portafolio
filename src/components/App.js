@@ -54,7 +54,7 @@ function App() {
           <Route path='/' element={<Info lang={lang}/>}/>
           <Route path='/portafolio' element={<Info lang={lang}/>}/>
           <Route path='/informacion' element={<Info lang={lang}/>}/>
-          <Route path='/cursos' element={<Cursos/>}/>
+          <Route path='/cursos' element={<Cursos lang={lang}/>}/>
           <Route path='/proyectos' element={<Proyectos lang={lang}/>}/>
         </Routes>
     </div>

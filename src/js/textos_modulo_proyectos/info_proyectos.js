@@ -1,7 +1,7 @@
 
-import personal from "../img/Gris.png";
-import cimat from "../img/cimat.png";
-import itver from "../img/itver.png";
+import personal from "../../img/Gris.png";
+import cimat from "../../img/cimat.png";
+import itver from "../../img/itver.png";
 import descripciones from "./descripciones.js";
 
 
